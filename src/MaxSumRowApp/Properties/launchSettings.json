@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MaxSumRowApp": {
+      "commandName": "Project",
+      "commandLineArgs": "Test.csv"
+    }
+  }
+}
