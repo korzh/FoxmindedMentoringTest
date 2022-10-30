@@ -11,7 +11,7 @@ public class TextProcessor
 
     public SortedSet<int> DefectiveRows { get; } = new SortedSet<int>();
 
-    public async Task<int> GetMaxSumRowNum()
+    public async Task<int> GetMaxSumRowNumAsync()
     {
         string? row;
         float maxSum = float.MinValue;

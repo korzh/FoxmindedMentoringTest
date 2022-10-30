@@ -18,7 +18,7 @@ else {
 Console.Write($"Processing {filePath}...");
 
 var processor = new TextProcessor(new StreamReader(filePath));
-var rowNum = await processor.GetMaxSumRowNum();
+var rowNum = await processor.GetMaxSumRowNumAsync();
 Console.WriteLine("done!");
 Console.WriteLine();
 
