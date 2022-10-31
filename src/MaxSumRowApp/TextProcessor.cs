@@ -19,17 +19,19 @@ public class TextProcessor
         int rowNum = 0;
         while ((row = await _reader.ReadLineAsync()) != null) {
             float sum = 0;
+            bool hasNums = false;
             var tokens = row.Split(',');
             foreach (var token in tokens) {
                 if (float.TryParse(token.Trim(), out var fnum)) {
                     sum += fnum;
+                    hasNums = true;
                 }
                 else {
                     DefectiveRows.Add(rowNum);
                 }
             }
 
-            if (sum > maxSum) {
+            if (hasNums && sum > maxSum) {
                 maxSum = sum;
                 maxSumRow = rowNum;
             }
